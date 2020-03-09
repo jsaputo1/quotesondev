@@ -82,3 +82,22 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+//New Function
+function red_scripts() {
+	$script_url = get_template_directory_uri() . '/js/api.js';
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'red_comments', $script_url, array( 'jquery' ), false, true );
+   wp_localize_script( 'red_comments', 'red_vars', array(
+	   'rest_url' => esc_url_raw( rest_url() ),
+	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' )
+   ) );
+ }
+ add_action( 'wp_enqueue_scripts', 'red_scripts' );
+
+ function random_quotes($query) {
+    $query->set('orderby', 'rand');
+    $query->set('posts_per_page', '1');
+
+}
+add_action('pre_get_posts', 'random_quotes');
