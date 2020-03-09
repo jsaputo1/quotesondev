@@ -8,28 +8,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: quotes_on_dev
 */
 
-@import 'abstracts/variables';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
+@import 'variables';
+@import 'mixins';
 
-@import 'base/reset';
-@import 'base/typography';
+@import 'reset';
+@import 'typography';
 
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
+@import 'header';
+@import 'footer';
 
-@import 'components/buttons';
-@import 'components/carousel';
-@import 'components/slider';
-
-@import 'pages/home';
-@import 'pages/about';
-@import 'pages/contact';
-@import 'pages/shop';
-
-@import 'themes/theme';
-@import 'themes/admin';
+@import 'home';
