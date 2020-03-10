@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   background: $grey;
   font-size: 16px;
   font-family: Exo;

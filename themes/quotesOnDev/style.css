@@ -82,7 +82,20 @@ table {
   font-weight: 300;
   font-style: normal; }
 
+header {
+  padding: 30px 15px; }
+  header img {
+    width: 75%; }
+
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   background: #222222;
   font-size: 16px;
   font-family: Exo;
