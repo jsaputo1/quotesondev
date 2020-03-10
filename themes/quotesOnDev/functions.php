@@ -95,9 +95,4 @@ function red_scripts() {
  }
  add_action( 'wp_enqueue_scripts', 'red_scripts' );
 
- function random_quotes($query) {
-    $query->set('orderby', 'rand');
-    $query->set('posts_per_page', '1');
 
-}
-add_action('pre_get_posts', 'random_quotes');
