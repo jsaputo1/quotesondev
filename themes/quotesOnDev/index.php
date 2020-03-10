@@ -21,6 +21,8 @@
 
     <span class="author">- <?php the_title(); ?></span>
     <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link"> <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a>
+
+    <a href="<?php the_permalink(); ?>"><?php the_category();?></a>
     <?php endforeach;?>
 
 </div>

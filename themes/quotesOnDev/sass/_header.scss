@@ -2,6 +2,8 @@ header {
   padding: 30px 15px;
 
   img {
+    display: flex;
+    justify-content: flex-start;
     width: 75%;
   }
 }

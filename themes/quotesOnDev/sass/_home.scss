@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   background: $grey;
@@ -17,6 +18,10 @@ body {
       color: $green;
     }
   }
+}
+button {
+  margin: 25px 0;
+  width: 150px;
 }
 
 .home-quote {
