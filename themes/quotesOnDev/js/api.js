@@ -8,7 +8,7 @@
       method: 'GET',
       url:
         red_vars.rest_url +
-        'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1&filter'
+        'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
     }).done(function(data) {
       $.each(data, function(index, value) {
         // console.log(value, 'value');
@@ -21,11 +21,11 @@
 
         // HTML
         $(homeQuote).html(quote);
-        $(authorQuote).append(author);
+        $(authorQuote).append(author, ' ');
         $(sourceLink).prop('href', sourceURL);
-        $(sourceLink).append(source);
+        $(sourceLink).append(source, ' ');
         if (source != '') {
-          $(authorQuote).append(',');
+          $(authorQuote).append(', ');
         }
       }); // Closing for each loop
     }); // Closing done function
