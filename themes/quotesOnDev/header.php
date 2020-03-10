@@ -9,4 +9,4 @@
 <body <?php body_class();?>>
     <header>
     <img src='<?php echo get_template_directory_uri() . "/images/qod-logo.svg"?>'>
-    </header
+</header>
