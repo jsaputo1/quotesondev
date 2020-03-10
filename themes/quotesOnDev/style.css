@@ -88,3 +88,11 @@ body {
   font-family: Exo;
   color: #ffffff;
   line-height: 1.5rem; }
+  body a {
+    color: #00cc00;
+    text-decoration: none; }
+    body a:visited {
+      color: #00cc00; }
+
+.home-quote {
+  margin: 25px 0px; }

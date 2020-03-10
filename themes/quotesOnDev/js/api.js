@@ -1,5 +1,9 @@
 (function($) {
-  $('.quote-button').on('click', function(e) {
+  const homeQuote = $('.home-quote');
+  const authorQuote = $('.author');
+  const homeSource = $('.source');
+  const sourceLink = $('.source-link');
+  $('#quote-button').on('click', function(e) {
     $.ajax({
       method: 'GET',
       url:
@@ -7,12 +11,26 @@
         'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
     }).done(function(data) {
       $.each(data, function(index, value) {
-        console.log(value, 'value');
-        let quote = value.content.rendered;
+        // console.log(value, 'value');
 
-        $('.random-generated').append(quote);
+        // Variables
+        let quote = value.content.rendered;
+        let author = value.title.rendered;
+        let source = value._qod_quote_source;
+        let sourceURL = value._qod_quote_source_url;
+
+        // HTML
+        $(homeQuote).html(quote);
+        $(authorQuote).append(author);
+        $(sourceLink).prop('href', sourceURL);
+        $(sourceLink).append(source);
+        if (source != '') {
+          $(authorQuote).append(',');
+        }
       }); // Closing for each loop
     }); // Closing done function
-    $('.random-generated').empty();
+    $(homeQuote).empty();
+    $(authorQuote).empty();
+    $(sourceLink).empty();
   }); // Closing event listener (random quote)
 })(jQuery); // Closing document ready function

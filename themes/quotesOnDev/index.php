@@ -15,18 +15,19 @@
     <?php foreach ( $quotes as $post ) : setup_postdata( $post ); ?>
 
     <!-- Random quote content -->
-    <p><?php the_content(); ?> </p><!-- the quote -->
+    <div class="home-quote">
+        <?php the_content(); ?> 
+    </div>
 
-    <span>- <?php the_title(); ?> ,<span><a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>"><?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a></span>
-
+    <span class="author">- <?php the_title(); ?></span>
+    <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link"> <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a>
     <?php endforeach;?>
 
 </div>
 
 <!-- Random quote generator -->
-<button class="quote-button">Click Me!</button>
-<div class="random-generated">
-</div>
+<button id="quote-button">Show Me Another!</button>
+
 
 <!-- Footer -->
 <?php get_footer();?>
