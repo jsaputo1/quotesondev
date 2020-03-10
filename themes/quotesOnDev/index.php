@@ -1,23 +1,35 @@
 <?php get_header(); ?>
 
-<?php if( have_posts() ) :
+<!-- Random quote loop -->
+<div class="random-quote">
 
-//The WordPress Loop: loads post content 
-    while( have_posts() ) :
-        the_post(); ?>
-    
-    <h2><?php the_title(); ?></h2>
-    <h3><?php the_permalink();?></h3>
-    <?php the_content(); ?>
-    
-    <!-- Loop ends -->
-    <?php endwhile;?>
+    <?php
+        $args = array( 
+            'post_type' => 'post', 
+            'orderby' => 'rand',
+            'numberposts' => 1
+            );
+        $quotes = get_posts( $args ); 
+    ?>
 
-    <?php the_posts_navigation();?>
+    <?php foreach ( $quotes as $post ) : setup_postdata( $post ); ?>
 
-<?php else : ?>
-        <p>No posts found</p>
-<?php endif;?>
+    <!-- Random quote content -->
+    <p><?php the_content(); ?> </p><!-- the quote -->
 
-    
+    <span>- <?php the_title(); ?> ,<span><a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>"><?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a></span>
+
+    <?php endforeach;?>
+
+</div>
+
+<!-- Random quote generator -->
+<button class="quote-button">Click Me!</button>
+<div class="random-generated">
+</div>
+
+<!-- Footer -->
 <?php get_footer();?>
+
+
+

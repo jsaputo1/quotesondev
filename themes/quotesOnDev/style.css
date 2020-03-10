@@ -83,5 +83,8 @@ table {
   font-style: normal; }
 
 body {
-  background: white;
-  font-size: 2em; }
+  background: #222222;
+  font-size: 16px;
+  font-family: Exo;
+  color: #ffffff;
+  line-height: 1.5rem; }
