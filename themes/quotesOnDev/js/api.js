@@ -8,7 +8,7 @@
       method: 'GET',
       url:
         red_vars.rest_url +
-        'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
+        'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1&filter'
     }).done(function(data) {
       $.each(data, function(index, value) {
         // console.log(value, 'value');

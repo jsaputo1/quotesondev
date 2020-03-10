@@ -132,3 +132,16 @@ button {
 
 .home-quote {
   margin: 25px 0px; }
+
+.category-page {
+  padding: 0 10px; }
+  .category-page h1 {
+    font-size: 1.5em;
+    padding-top: 25px; }
+  .category-page hr {
+    border-top: 1px dotted white;
+    margin-top: 40px; }
+
+.posts-nav {
+  margin: 25px 0px;
+  letter-spacing: 2px; }
