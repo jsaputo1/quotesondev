@@ -8,5 +8,6 @@
 </head>
 <body <?php body_class();?>>
     <header>
-    <img src='<?php echo get_template_directory_uri() . "/images/qod-logo.svg"?>'>
-</header>
+        <a href="<?php echo get_home_url()?>">
+        <img src='<?php echo get_template_directory_uri() . "/images/qod-logo.svg"?>'></a>
+    </header>
