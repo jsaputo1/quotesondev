@@ -145,3 +145,14 @@ button {
 .posts-nav {
   margin: 25px 0px;
   letter-spacing: 2px; }
+
+.archive-page {
+  padding-bottom: 75px; }
+  .archive-page h1 {
+    font-size: 1.6em;
+    padding: 25px 0; }
+  .archive-page h2 {
+    font-size: 1.4em;
+    margin: 25px 0; }
+  .archive-page a {
+    padding-right: 25px; }
