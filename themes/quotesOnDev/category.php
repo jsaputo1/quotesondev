@@ -4,8 +4,6 @@
     <h1 class="category-header">Category: <?php $category = get_the_category(); echo $category[0]->cat_name;?> </h1>
     <hr>
 
-<!-- Category quote loop -->
-
     <?php
         $args = array( 
             'post_type' => 'post', 
@@ -17,7 +15,6 @@
 
     <?php foreach ( $quotes as $post ) : setup_postdata( $post ); ?>
 
-    <!-- Random quote content -->
     <div class="home-quote">
         <?php the_content(); ?> 
     </div>
@@ -26,7 +23,6 @@
      <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?>
     <hr>
     <?php endforeach;?>
-
 
 </div>
 <div class="posts-nav">
@@ -37,8 +33,6 @@
     ));?>
 
 </div>
-
-
 
 <!-- Footer -->
 <?php get_footer();?>
