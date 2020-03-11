@@ -93,14 +93,14 @@ header {
             justify-content: flex-start;
     width: 75%; }
 
-footer span {
-  padding: 0 5px 0 10px; }
-
-footer a {
-  padding-right: 5px; }
-
-footer p {
-  margin-top: 15px; }
+footer {
+  margin-top: 25px; }
+  footer span {
+    padding: 0 5px 0 10px; }
+  footer a {
+    padding-right: 5px; }
+  footer p {
+    margin-top: 15px; }
 
 body {
   display: -webkit-box;
@@ -134,13 +134,13 @@ button {
 .home-quote {
   margin: 25px 0px; }
 
+.dotted-line {
+  border-top: 1px dotted white;
+  margin-top: 40px; }
+
 .category-page h1 {
   font-size: 1.5em;
   padding-top: 25px; }
-
-.category-page hr {
-  border-top: 1px dotted white;
-  margin-top: 40px; }
 
 .posts-nav {
   margin: 25px 0px;
@@ -156,3 +156,28 @@ button {
     margin: 25px 0; }
   .archive-page a {
     padding-right: 25px; }
+
+.submit-a-quote form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.submit-a-quote input {
+  background-color: #222222;
+  border: 2px solid #00cc00;
+  border-radius: 2px;
+  height: 30px; }
+
+#quote {
+  height: 60px; }
+
+#submit {
+  color: #00cc00;
+  width: 100px;
+  margin-top: 25px;
+  height: 30px;
+  padding: 2px 5px; }
