@@ -90,9 +90,43 @@ function red_scripts() {
 	wp_enqueue_script( 'red_comments', $script_url, array( 'jquery' ), false, true );
    wp_localize_script( 'red_comments', 'red_vars', array(
 	   'rest_url' => esc_url_raw( rest_url() ),
-	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' )
+	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
+	   'ajax_url' => admin_url( 'admin-ajax.php' ),
+	   'comment_nonce' => wp_create_nonce( 'red_comment_status' ),
+	   'post_id' => get_the_ID(),
+	   'nonce' => wp_create_nonce( 'wp_rest' ),
+      'success' => 'Thanks, your submission was received!',
+      'failure' => 'Your submission could not be processed.'
    ) );
  }
  add_action( 'wp_enqueue_scripts', 'red_scripts' );
+
+ function tag_page_filters($query) {
+	if (is_tag()) : 
+    $query->set('order', 'ASC');
+    $query->set('orderby', 'title');
+    $query->set('posts_per_page', '5');
+    endif; 
+}
+add_action('pre_get_posts', 'tag_page_filters');
+
+function red_comment_ajax() {
+	check_ajax_referer( 'red_comment_status', 'security' );
+	if ( ! current_user_can( 'edit_posts' ) ) {
+	   exit;
+	}
+	$id = $_POST['the_post_id'];
+	if ( isset( $id ) && is_numeric( $id ) ) {
+	   $the_post = array(
+		  'ID' => $id,
+		  'comment_status' => 'closed'
+	   );
+	   wp_update_post( $the_post );
+	}
+	exit;
+ }
+ add_action( 'wp_ajax_red_comment_ajax', 'red_comment_ajax' );
+
+ // add_action( 'wp_ajax_nopriv_red_comment_ajax', 'red_comment_ajax' );
 
 

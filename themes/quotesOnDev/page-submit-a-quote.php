@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 <div class="submit-a-quote">
-  <form action="action_page.php">
+  <form>
 
     <label for="author">Author</label>
-    <input type="text" id="author" name="firstname">
+    <input type="text" id="author-form" name="firstname">
 
     <label for="quote">Quote</label>
-    <input type="text" id="quote">
+    <input type="text" id="quote-form">
 
     <label for="source-form">Where did you find this quote? (e.g. book name)</label>
     <input type="text" id="source-form">

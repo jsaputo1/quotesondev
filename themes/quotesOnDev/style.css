@@ -170,9 +170,10 @@ button {
   background-color: #222222;
   border: 2px solid #00cc00;
   border-radius: 2px;
-  height: 30px; }
+  height: 30px;
+  color: white; }
 
-#quote {
+#quote-form {
   height: 60px; }
 
 #submit {
