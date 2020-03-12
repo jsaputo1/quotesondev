@@ -5,10 +5,6 @@
   const homeSource = $('.source');
   const sourceLink = $('.source-link');
   // Variables for adding a quote
-  const $authorToAdd = $('#author-form').val();
-  const $quoteToAdd = $('#quote-form').val();
-  const $sourceToAdd = $('#source-form').val();
-  const $sourceUrlToAdd = $('#url-form').val();
 
   // Random quote
   $('#quote-button').on('click', function(e) {
@@ -43,11 +39,17 @@
   }); // Closing event listener (generate quote)
 
   // Submit quote
-  $('.submit-a-quote').on('submit', function(event) {
+  $('#submit').on('click', function(event) {
     event.preventDefault();
-    // Variables
+    // console.log('test');
+
+    const $authorToAdd = $('#author-form').val();
+    const $quoteToAdd = $('#quote-form').val();
+    const $sourceToAdd = $('#source-form').val();
+    const $sourceUrlToAdd = $('#url-form').val();
+
     $.ajax({
-      method: 'post',
+      method: 'POST',
       url: red_vars.rest_url + 'wp/v2/posts',
       data: {
         content: $quoteToAdd,
@@ -58,8 +60,24 @@
       beforeSend: function(xhr) {
         xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
       }
-    }).done(function(response) {
-      alert('Success');
-    });
-  }); // Closing event listener (generate quote)
+    })
+      .done(function(response) {
+        if ($authorToAdd === '' || $quoteToAdd === '') {
+          alert(
+            'Please check if the name of the author and the quote were filled correctly'
+          );
+        } else {
+          alert('Success! Your quote has been submitted.');
+          $('#author-form').val('');
+          $('#quote-form').val('');
+          $('#source-form').val('');
+          $('#url-form').val('');
+        }
+      })
+      .fail(function(err) {
+        alert(
+          'Please check if the name of the author and the quote were filled correctly'
+        );
+      });
+  }); // Closing .event listener (generate quote)
 })(jQuery); // Closing document ready function
