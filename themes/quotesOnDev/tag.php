@@ -18,8 +18,7 @@
 
     <span class="author">- <?php the_title(); ?></span>
      <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?>
-     <?php the_tags();?>
-    <hr class="dotted-line">
+         <hr class="dotted-line">
     <?php endwhile;?>
 
 </div>

@@ -1,21 +1,35 @@
 <?php get_header(); ?>
+<div class="category-page">
 
-<?php if( have_posts() ) :
-//The WordPress Loop: loads post content 
+
+    
+    <?php  
+    if( have_posts() )  
     while( have_posts() ) :
-        the_post(); ?>
-    
-    <h2><?php the_title(); ?></h2>
-    <?php the_content(); ?>
-    
-    <!-- Loop ends -->
+    the_post(); 
+    ?>
+
+    <div class="home-quote">
+        <?php the_content(); ?> 
+    </div>
+
+    <span class="author">- <?php the_title(); ?></span>
+     <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?>
+    <hr class="dotted-line">
     <?php endwhile;?>
 
-    <?php the_posts_navigation();?>
+</div>
+<div class="posts-nav">
+    <?php the_posts_pagination(array (
+        'prev_text' => __( 'Prev' ),
+        'next_text' => __( 'Next' ),  
+        'screen_reader_text' => __('  ')
+    ));?>
 
-<?php else : ?>
-        <p>No posts found</p>
-<?php endif;?>
+</div>
 
-    
+<!-- Footer -->
 <?php get_footer();?>
+
+
+

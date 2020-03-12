@@ -1,19 +1,17 @@
-<?php get_header(); ?>
+
+    <?php get_header(); ?>
 <div class="category-page">
 
-    <h1 class="category-header">Category: <?php $category = get_the_category(); echo $category[0]->cat_name;?> </h1>
-    <hr>
+<h1 class="category-header">Tags: <?php $tags = get_tags(); echo $tags[0]->name;?> </h1>
+    <hr class="dotted-line">
+    
 
-    <?php
-        $args = array( 
-            'post_type' => 'post', 
-            'orderby' => 'ASC',
-            'numberposts' => 5
-            );
-        $quotes = get_posts( $args ); 
+
+    <?php  
+    if( have_posts() )  
+    while( have_posts() ) :
+    the_post(); 
     ?>
-
-    <?php foreach ( $quotes as $post ) : setup_postdata( $post ); ?>
 
     <div class="home-quote">
         <?php the_content(); ?> 
@@ -21,8 +19,8 @@
 
     <span class="author">- <?php the_title(); ?></span>
      <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?>
-    <hr>
-    <?php endforeach;?>
+    <hr class="dotted-line">
+    <?php endwhile;?>
 
 </div>
 <div class="posts-nav">
@@ -36,6 +34,9 @@
 
 <!-- Footer -->
 <?php get_footer();?>
+
+
+
 
 
 
