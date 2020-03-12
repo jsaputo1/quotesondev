@@ -4,7 +4,11 @@
     flex-direction: column;
   }
 
+  label {
+    margin-bottom: 10px;
+  }
   input {
+    margin-bottom: 20px;
     background-color: $grey;
     border: 2px solid $green;
     border-radius: 2px;
@@ -12,7 +16,7 @@
     color: white;
   }
 }
-#quote-form{
+#quote-form {
   height: 60px;
 }
 
@@ -22,4 +26,8 @@
   margin-top: 25px;
   height: 30px;
   padding: 2px 5px;
+  cursor: pointer;
+  &:hover {
+    color: #090;
+  }
 }

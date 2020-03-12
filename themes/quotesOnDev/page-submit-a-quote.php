@@ -16,7 +16,7 @@
     <input type="text" id="url-form">
 
 
-    <input type="submit" id="submit" value="Submit Quote">
+    <input type="submit" id="submit" value="Submit Quote" />
 
   </form>
 </div> 

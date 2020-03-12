@@ -126,6 +126,8 @@ body {
     text-decoration: none; }
     body a:visited {
       color: #00cc00; }
+    body a:hover {
+      color: #090; }
 
 button {
   margin: 25px 0;
@@ -166,7 +168,11 @@ button {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.submit-a-quote label {
+  margin-bottom: 10px; }
+
 .submit-a-quote input {
+  margin-bottom: 20px;
   background-color: #222222;
   border: 2px solid #00cc00;
   border-radius: 2px;
@@ -181,4 +187,7 @@ button {
   width: 100px;
   margin-top: 25px;
   height: 30px;
-  padding: 2px 5px; }
+  padding: 2px 5px;
+  cursor: pointer; }
+  #submit:hover {
+    color: #090; }

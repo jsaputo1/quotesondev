@@ -18,6 +18,9 @@ body {
     &:visited {
       color: $green;
     }
+    &:hover {
+      color: #090;
+    }
   }
 }
 button {
@@ -27,4 +30,9 @@ button {
 
 .home-quote {
   margin: 25px 0px;
+}
+
+.dotted-line {
+  border-top: 1px dotted white;
+  margin-top: 40px;
 }
