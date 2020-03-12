@@ -22,8 +22,22 @@
   }
 
   a {
-    font-weight: 400;
+    font-weight: 300;
   }
 
   padding-bottom: 75px;
+
+  @include tablet {
+    h1 {
+      font-size: 32px;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+
+    ul {
+      font-size: 20px;
+    }
+  }
 }
