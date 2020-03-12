@@ -118,6 +118,7 @@ body {
   background: #222222;
   font-size: 16px;
   font-family: 'Exo';
+  font-weight: 300;
   color: #ffffff;
   line-height: 1.5rem;
   padding: 0 10px; }
@@ -195,6 +196,12 @@ body {
     padding: 0 2px; }
   .archive-page a {
     font-weight: 400; }
+
+.about h1 {
+  font-size: 2em; }
+
+.about p {
+  margin: 25px 0; }
 
 .search p {
   margin: 25px 0px; }
