@@ -18,11 +18,17 @@
     <div class="home-quote">
         <?php the_content(); ?> 
     </div>
+    <div class="quote-section">
+        <span class="author">— <?php the_title(); ?></span>
 
-    <span class="author">- <?php the_title(); ?></span>
-    <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link"> <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a>
+        <div class="source">
+        <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link" target="new"> 
+        
+        <span><?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a></span>
+        </div>
+    </div>
 
-    <a href="<?php the_permalink(); ?>"><?php the_category();?></a>
+    
     <?php endforeach;?>
 
 </div>

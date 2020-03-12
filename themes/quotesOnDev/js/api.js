@@ -25,17 +25,22 @@
 
         // HTML
         $(homeQuote).html(quote);
-        $(authorQuote).append(author, ' ');
-        $(sourceLink).prop('href', sourceURL);
-        $(sourceLink).append(source, ' ');
-        if (source != '') {
-          $(authorQuote).append(', ');
+        $(authorQuote).append('— ', author, '');
+        // $(sourceLink).prop('href', sourceURL);
+        // $(sourceLink).append(source, ' ');
+
+        if (sourceURL) {
+          $(homeSource).append(
+            `<a href="${sourceURL}"class="source-link" target="new"><span class="source">${source}</span></a>`
+          );
+        } else {
+          $(homeSource).append(`<span class="source">${source}</span>`);
         }
       }); // Closing for each loop
     }); // Closing done function
     $(homeQuote).empty();
     $(authorQuote).empty();
-    $(sourceLink).empty();
+    $(homeSource).empty();
   }); // Closing event listener (generate quote)
 
   // Submit quote

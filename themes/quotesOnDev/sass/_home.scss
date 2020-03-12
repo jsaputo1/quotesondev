@@ -5,7 +5,7 @@ body {
   align-content: center;
   background: $grey;
   font-size: 16px;
-  font-family: Exo;
+  font-family: 'Exo';
   color: #ffffff;
   line-height: 1.5rem;
   padding: 0 10px;
@@ -23,9 +23,25 @@ body {
     }
   }
 }
-button {
-  margin: 25px 0;
-  width: 150px;
+
+#quote-button {
+  font-family: Exo;
+  margin-top: 25px;
+
+  color: $green;
+  background-color: $grey;
+  border: 1px solid $green;
+  border-radius: 3px;
+
+  font-size: 1em;
+
+  line-height: 1;
+  padding: 0.75rem 2.25rem;
+
+  cursor: pointer;
+  &:hover {
+    color: #090;
+  }
 }
 
 .home-quote {
@@ -35,4 +51,19 @@ button {
 .dotted-line {
   border-top: 1px dotted white;
   margin-top: 40px;
+}
+
+.quote-section {
+  display: flex;
+  flex-wrap: wrap;
+  span {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+.source {
+  font-family: 'Exo';
+  font-style: italic;
+  font-weight: 300;
 }
