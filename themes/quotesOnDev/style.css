@@ -94,6 +94,7 @@ header {
     width: 75%; }
 
 footer {
+  font-size: 16px;
   margin-top: 25px; }
   footer span {
     padding: 0 5px 0 10px; }
@@ -101,6 +102,22 @@ footer {
     padding-right: 5px; }
   footer p {
     margin-top: 15px; }
+  footer .hidden-dash {
+    display: none; }
+  @media (min-width: 600px) {
+    footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      footer p {
+        margin-top: 0px; }
+      footer span {
+        padding: 0 15px 0 10px; } }
+  footer .hidden-dash {
+    display: block; }
 
 body {
   display: -webkit-box;
@@ -129,10 +146,15 @@ body {
       color: #00cc00; }
     body a:hover {
       color: #090; }
+  @media (min-width: 600px) {
+    body {
+      font-size: 24px;
+      line-height: 42px; } }
 
 #quote-button {
   font-family: Exo;
   margin-top: 25px;
+  width: 250px;
   color: #00cc00;
   background-color: #222222;
   border: 1px solid #00cc00;
@@ -143,6 +165,9 @@ body {
   cursor: pointer; }
   #quote-button:hover {
     color: #090; }
+  @media (min-width: 600px) {
+    #quote-button {
+      font-size: 0.75em; } }
 
 .home-quote {
   margin: 25px 0px; }

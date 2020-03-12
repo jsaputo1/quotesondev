@@ -23,25 +23,29 @@ body {
       color: #090;
     }
   }
+  @include tablet {
+    font-size: 24px;
+    line-height: 42px;
+  }
 }
 
 #quote-button {
   font-family: Exo;
   margin-top: 25px;
-
+  width: 250px;
   color: $green;
   background-color: $grey;
   border: 1px solid $green;
   border-radius: 3px;
-
   font-size: 1em;
-
   line-height: 1;
   padding: 0.75rem 2.25rem;
-
   cursor: pointer;
   &:hover {
     color: #090;
+  }
+  @include tablet {
+    font-size: 0.75em;
   }
 }
 
