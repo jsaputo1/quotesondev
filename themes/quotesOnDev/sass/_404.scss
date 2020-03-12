@@ -3,3 +3,27 @@
     margin: 25px 0px;
   }
 }
+
+.search-input {
+  font-family: Exo;
+  font-weight: 300;
+  margin-top: 25px;
+  color: #fff;
+  background-color: $grey;
+  border: 2px solid $green;
+  border-radius: 3px;
+  font-size: 1em;
+  padding: 0.75rem 1rem;
+
+  &:focus {
+    border-color: #fcfcd2;
+  }
+}
+
+.search-submit {
+  color: $green;
+  background-color: $grey;
+  border: none;
+  font-size: 1.25em;
+  cursor: pointer;
+}

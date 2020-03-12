@@ -206,6 +206,26 @@ body {
 .search p {
   margin: 25px 0px; }
 
+.search-input {
+  font-family: Exo;
+  font-weight: 300;
+  margin-top: 25px;
+  color: #fff;
+  background-color: #222222;
+  border: 2px solid #00cc00;
+  border-radius: 3px;
+  font-size: 1em;
+  padding: 0.75rem 1rem; }
+  .search-input:focus {
+    border-color: #fcfcd2; }
+
+.search-submit {
+  color: #00cc00;
+  background-color: #222222;
+  border: none;
+  font-size: 1.25em;
+  cursor: pointer; }
+
 .submit-a-quote form {
   display: -webkit-box;
   display: -ms-flexbox;
