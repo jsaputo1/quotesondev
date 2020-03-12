@@ -16,14 +16,19 @@
         $quotes = get_posts( $args ); 
     ?>
 
-    <?php foreach ( $quotes as $post ) : setup_postdata( $post ); ?>
+    
 
-    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-
-    <?php endforeach;?>
+    <ul>
+        <?php foreach ( $quotes as $post ) : setup_postdata( $post ); ?>
+        <li> 
+        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </li>
+        <?php endforeach;?>
+    </ul>
 
     <!-- Category loop -->
     <h2>Categories</h2>
+    <ul>
     <?php 
     $args = array(
         'order' => 'ASC', 
@@ -32,13 +37,16 @@
     foreach ($cats as $cat) {           
         $cat_id= $cat->term_id;
         $cat_name= $cat->name; ?>
+        <li>
 
-        <?php echo '<a href="' . get_category_link( $cat_id ) . '">'.$cat->name.'</a>'; ?>    
+        <?php echo '<a href="' . get_category_link( $cat_id ) . '">'.$cat->name.'</a>'; ?>    </li>
 
     <?php  } ?>
+    </ul>
 
     <!-- Tags loop -->
     <h2>Tags</h2>
+    <ul>
     <?php 
         $args = array(
             'order' => 'ASC', 
@@ -47,8 +55,11 @@
         foreach ($tags as $tag) {           
             $tag_id= $tag->term_id;
             $tag_name= $tag->name; ?>
-            <?php echo '<a href="' . get_tag_link( $tag_id ) . '">'.$tag->name.'</a>'; ?>      
+            <li>
+            <?php echo '<a href="' . get_tag_link( $tag_id ) . '">'.$tag->name.'</a>'; ?> 
+            </li>     
     <?php  } ?>
+    </ul>
 
 </div>
 
