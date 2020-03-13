@@ -3,7 +3,7 @@
 
 
     
-    <?php  
+<?php  
     if( have_posts() )  
     while( have_posts() ) :
     the_post(); 
@@ -13,9 +13,15 @@
         <?php the_content(); ?> 
     </div>
 
-    <span class="author">- <?php the_title(); ?></span>
-     <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?>
-    <hr class="dotted-line">
+    <span class="author">- <?php the_title(); ?>
+
+
+            
+        <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link" target="new"> 
+        
+        <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a></span>
+
+         <hr class="dotted-line">
     <?php endwhile;?>
 
 </div>

@@ -30,4 +30,7 @@ footer {
   .hidden-dash {
     display: block;
   }
+  @include desktop {
+    justify-content: flex-end;
+  }
 }

@@ -4,6 +4,14 @@ header {
   img {
     display: flex;
     justify-content: flex-start;
-    width: 75%;
+    width: 300px;
+
+    @include tablet {
+      width: 500px;
+    }
+    @include desktop {
+      width: 700px;
+      margin: 0 auto;
+    }
   }
 }

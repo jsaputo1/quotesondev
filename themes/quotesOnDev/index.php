@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
+
 <!-- Random quote loop -->
 <div class="random-quote">
+
 
     <?php
         $args = array( 
@@ -13,11 +15,18 @@
     ?>
 
     <?php foreach ( $quotes as $post ) : setup_postdata( $post ); ?>
-
+<div class="desktop-container">
     <!-- Random quote content -->
+    <i class="fas fa-quote-left" id="left"></i>
     <div class="home-quote">
+    
+
         <?php the_content(); ?> 
     </div>
+    <i class="fas fa-quote-right" id="right"></i>
+
+    </div>
+        
     <div class="quote-section">
         <span class="author">— <?php the_title(); ?></span>
 
@@ -30,6 +39,7 @@
 
     
     <?php endforeach;?>
+   
 
 </div>
 

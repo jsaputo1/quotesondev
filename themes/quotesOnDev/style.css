@@ -91,7 +91,14 @@ header {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    width: 75%; }
+    width: 300px; }
+    @media (min-width: 600px) {
+      header img {
+        width: 500px; } }
+    @media (min-width: 1040px) {
+      header img {
+        width: 700px;
+        margin: 0 auto; } }
 
 footer {
   font-size: 16px;
@@ -118,6 +125,11 @@ footer {
         padding: 0 15px 0 10px; } }
   footer .hidden-dash {
     display: block; }
+  @media (min-width: 1040px) {
+    footer {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
 
 body {
   display: -webkit-box;
@@ -127,11 +139,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   background: #222222;
   font-size: 16px;
   font-family: 'Exo';
@@ -149,11 +161,15 @@ body {
   @media (min-width: 600px) {
     body {
       font-size: 24px;
-      line-height: 42px; } }
+      line-height: 42px;
+      max-width: 1240x; } }
   body h1 {
     font-weight: 500; }
   body h2 {
     font-weight: 500; }
+  @media (min-width: 1040px) {
+    body {
+      width: 1080px; } }
 
 #quote-button {
   font-family: Exo;
@@ -172,9 +188,27 @@ body {
   @media (min-width: 600px) {
     #quote-button {
       font-size: 0.75em; } }
+  @media (min-width: 1040px) {
+    #quote-button {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 0 auto; } }
 
 .home-quote {
   margin: 25px 0px; }
+  @media (min-width: 1040px) {
+    .home-quote {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 650px; } }
 
 .dotted-line {
   border-top: 1px dotted white;
@@ -189,11 +223,49 @@ body {
   .quote-section span {
     padding-right: 5px;
     padding-left: 5px; }
+  @media (min-width: 1040px) {
+    .quote-section {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .source {
   font-family: 'Exo';
   font-style: italic;
   font-weight: 300; }
+
+.source-link {
+  font-family: 'Exo';
+  font-style: italic;
+  font-weight: 300; }
+
+@media (min-width: 1040px) {
+  .desktop-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+#left {
+  display: none; }
+  @media (min-width: 1040px) {
+    #left {
+      display: block;
+      font-size: 115px;
+      color: #00cc00; } }
+
+#right {
+  display: none; }
+  @media (min-width: 1040px) {
+    #right {
+      display: block;
+      font-size: 115px;
+      color: #00cc00; } }
 
 .category-page h1 {
   font-size: 1.5em;
@@ -201,7 +273,8 @@ body {
 
 .posts-nav {
   margin: 25px 0px;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  font-size: 16px; }
 
 .archive-page {
   padding-bottom: 75px; }
@@ -264,25 +337,25 @@ body {
   font-size: 1.25em;
   cursor: pointer; }
 
-.submit-a-quote form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
-.submit-a-quote label {
-  margin-bottom: 10px; }
-
-.submit-a-quote input {
-  margin-bottom: 20px;
-  background-color: #222222;
-  border: 2px solid #00cc00;
-  border-radius: 2px;
-  height: 30px;
-  color: white; }
+.submit-a-quote {
+  font-size: 16px; }
+  .submit-a-quote form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .submit-a-quote label {
+    margin-bottom: 10px; }
+  .submit-a-quote input {
+    margin-bottom: 20px;
+    background-color: #222222;
+    border: 2px solid #00cc00;
+    border-radius: 2px;
+    height: 30px;
+    color: white; }
 
 #quote-form {
   height: 60px; }
