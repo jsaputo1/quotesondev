@@ -149,15 +149,46 @@ body {
   @media (min-width: 600px) {
     body {
       font-size: 24px;
-      line-height: 42px;
-      max-width: 1240x; } }
+      line-height: 42px; } }
   body h1 {
     font-weight: 500; }
   body h2 {
     font-weight: 500; }
   @media (min-width: 1040px) {
-    body {
-      width: 1080px; } }
+    body p {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 4.5rem 175px 1.5rem; } }
+
+@media (min-width: 1040px) {
+  .random-quote-home-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 1080px;
+    margin: 0 auto; }
+    .random-quote-home-page .author {
+      margin-left: 300px; }
+    .random-quote-home-page .source {
+      margin-bottom: 30px; } }
+
+.random-quote-home-page q {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 #quote-button {
   font-family: Exo;
@@ -245,22 +276,6 @@ body {
     font-size: 125px;
     color: #00cc00;
     margin-top: 100px; } }
-
-#left {
-  display: none; }
-  @media (min-width: 1040px) {
-    #left {
-      display: block;
-      font-size: 115px;
-      color: #00cc00; } }
-
-#right {
-  display: none; }
-  @media (min-width: 1040px) {
-    #right {
-      display: block;
-      font-size: 115px;
-      color: #00cc00; } }
 
 .category-page h1 {
   font-size: 1.5em;
