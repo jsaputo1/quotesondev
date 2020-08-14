@@ -2,7 +2,7 @@
 
     <section class="random-quote-home-page">
     <!-- Random quote loop -->
-    <div class="random-quote">
+
         <?php
         $args = array( 
         'post_type' => 'post', 
@@ -23,17 +23,13 @@
 
         <div class="quote-section">
             <span class="author">— <?php the_title(); ?></span>
-
             <div class="source">
             <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link" target="new"> 
-
             <span><?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a></span>
             </div>
-        </div>
+        </div> 
 
         <?php endforeach;?>
-
-    </div>
 
     <!-- Random quote generator -->
     <button id="quote-button">Show Me Another!</button>
