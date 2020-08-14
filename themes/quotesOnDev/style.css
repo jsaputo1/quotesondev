@@ -132,18 +132,6 @@ footer {
               justify-content: flex-end; } }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: #222222;
   font-size: 16px;
   font-family: 'Exo';
@@ -198,18 +186,6 @@ body {
               justify-content: center;
       margin: 0 auto; } }
 
-.home-quote {
-  margin: 25px 0px; }
-  @media (min-width: 1040px) {
-    .home-quote {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      width: 650px; } }
-
 .dotted-line {
   border-top: 1px dotted white;
   margin-top: 40px; }
@@ -243,13 +219,32 @@ body {
   font-weight: 300; }
 
 @media (min-width: 1040px) {
-  .desktop-container {
+  .home-quote {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; } }
+
+@media (min-width: 1040px) {
+  q::before {
+    content: '\F10d';
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    font-size: 125px;
+    color: #00cc00;
+    margin-top: 100px; }
+  q::after {
+    content: '\F10e';
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    font-size: 125px;
+    color: #00cc00;
+    margin-top: 100px; } }
 
 #left {
   display: none; }
