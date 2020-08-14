@@ -1,8 +1,4 @@
 body {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
   background: $grey;
   font-size: 16px;
   font-family: 'Exo';
@@ -69,7 +65,6 @@ body {
   @include desktop {
     display: flex;
     justify-content: center;
-    width: 650px;
   }
 }
 
@@ -106,7 +101,8 @@ body {
 .desktop-container {
   @include desktop {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 650px;
   }
 }
 
