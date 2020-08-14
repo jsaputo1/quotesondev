@@ -6,7 +6,7 @@ body {
   color: #ffffff;
   line-height: 1.5rem;
   padding: 0 10px;
-
+  
   a {
     color: $green;
 
@@ -22,7 +22,6 @@ body {
   @include tablet {
     font-size: 24px;
     line-height: 42px;
-    max-width: 1240x;
   }
   h1 {
     font-weight: 500;
@@ -31,8 +30,35 @@ body {
     font-weight: 500;
   }
   @include desktop {
-    width: 1080px;
+    p {
+      display: flex;
+      align-self: flex-start;
+      justify-content: center;
+      margin: 4.5rem 175px 1.5rem;
+    }
 
+  }
+}
+
+.random-quote-home-page {
+  @include desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+
+  .author {
+    margin-left: 300px;
+  }
+  .source {
+    margin-bottom: 30px;
+  }
+
+  }
+
+  q {
+    display: flex;
   }
 }
 
@@ -115,30 +141,5 @@ body {
     font-size: 125px;
     color: $green;
     margin-top: 100px;
-  }
-}
-
-#left {
-  display: none;
-  @include desktop {
-    display: block;
-    // position: relative;
-    // top: 175px;
-    // left: 50px;
-    font-size: 115px;
-    color: $green;
-  }
-}
-
-#right {
-  display: none;
-
-  @include desktop {
-    display: block;
-    // position: relative;
-    // top: 175;
-    // right: 50px;
-    font-size: 115px;
-    color: $green;
   }
 }
