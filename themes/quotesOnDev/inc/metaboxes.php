@@ -32,13 +32,20 @@ function qod_register_metaboxes() {
 		'name' => 'Quote Source',
 		'desc' => 'Where did we find this quote?',
 		'id'   => $prefix . 'quote_source',
-		'type' => 'text',
+		'type' => 'num',
 	) );
 
    $quote_meta->add_field( array(
 		'name' => 'Source URL',
 		'desc' => 'What\'s the URL of the source, if available?',
 		'id'   => $prefix . 'quote_source_url',
+		'type' => 'text_url',
+	) );
+
+	$quote_meta->add_field( array(
+		'name' => 'Test test',
+		'desc' => 'What\'s the URL of the source, if available?',
+		'id'   => $prefix . 'quote_source_url_2',
 		'type' => 'text_url',
 	) );
 }
