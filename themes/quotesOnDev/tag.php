@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <div class="category-page"> 
+    <h1 class="category-header">Tag: <?php echo single_term_title( '', false ) ;?></h1>
+    <hr class="dotted-line">
     <?php  
     if( have_posts() )  
     while( have_posts() ) :
     the_post();
     ?>
-    <h1 class="category-header"><?php echo the_tags(); ?></h1>
-    <hr class="dotted-line">
     <div class="home-quote">
         <?php the_content(); ?> 
     </div>
