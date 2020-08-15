@@ -6,12 +6,9 @@ body {
   color: #ffffff;
   line-height: 1.5rem;
   padding: 0 10px;
-  
   a {
     color: $green;
-
     text-decoration: none;
-
     &:visited {
       color: $green;
     }
@@ -29,40 +26,61 @@ body {
   h2 {
     font-weight: 500;
   }
-
 }
 
-.random-quote-home-page {
-
-
+.home-container {
   @include desktop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1080px;
-  margin: 0 auto;
-
-  p {
     display: flex;
-    align-self: flex-start;
-    justify-content: center;
-    margin: 4.5rem 175px 1.5rem;
-  }
-  .author {
-    margin-left: 300px;
-  }
-
-  q {
-    // background-color: yellowgreen;
-    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1080px;
+    margin: 0 auto;
   }
 }
 
+.home-quote {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 300px;
+      width: 650px;
+      margin: 0px 20px;
+    }
+  }
+}
+
+@include desktop {
+  q {
+    display: flex;
+  }
+  q::before {
+    content: '\F10d';
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    font-size: 125px;
+    color: $green;
+    margin-top: 75px;
+  }
+  q::after {
+    content: '\F10e';
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    font-size: 125px;
+    color: $green;
+    margin-top: 200px;
+  }
 }
 
 #quote-button {
   font-family: Exo;
-  margin-top: 25px;
+  margin-top: 40px;
   width: 250px;
   color: $green;
   background-color: $grey;
@@ -81,7 +99,6 @@ body {
   @include desktop {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
   }
 }
 
@@ -90,7 +107,7 @@ body {
   margin-top: 40px;
 }
 
-.quote-section {
+.credentials {
   display: flex;
   flex-wrap: wrap;
   span {
@@ -100,6 +117,12 @@ body {
   @include desktop {
     display: flex;
     justify-content: center;
+  }
+}
+
+.author {
+  @include desktop {
+    margin-left: 300px;
   }
 }
 
@@ -113,37 +136,4 @@ body {
   font-family: 'Exo';
   font-style: italic;
   font-weight: 300;
-}
-
-.home-quote {
-  @include desktop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p {
-      display: flex;
-      align-self: flex-start;
-      justify-content: center;
-      margin: 4.5rem 175px 1.5rem;
-    }
-}
-
-@include desktop {
-  q::before {
-    content: '\F10d';
-    font-family: 'FontAwesome';
-    font-weight: 900;
-    font-size: 125px;
-    color: $green;
-    margin-top: 100px;
-  }
-  q::after {
-    content: '\F10e';
-    font-family: 'FontAwesome';
-    font-weight: 900;
-    font-size: 125px;
-    color: $green;
-    margin-top: 100px;
-  }
-}
 }
