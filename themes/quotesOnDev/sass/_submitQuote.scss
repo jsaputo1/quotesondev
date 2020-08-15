@@ -8,25 +8,32 @@
   label {
     margin-bottom: 10px;
   }
-  input {
+  textarea {
     margin-bottom: 20px;
     background-color: $grey;
     border: 2px solid $green;
     border-radius: 2px;
     height: 30px;
     color: white;
+    padding: 5px;
   }
 }
 #quote-form {
-  height: 60px;
+  height: 38px;
 }
 
 #submit {
+  background-color: $grey;
+  font-family: Exo;
+  border: 1px solid $green;
+  border-radius: 3px;
+  font-size: 1em;
+  line-height: 1;
   color: $green;
-  width: 100px;
-  margin-top: 25px;
+  width: 125px;
+  margin-top: 10px;
   height: 30px;
-  padding: 2px 5px;
+  padding: 5px 5px;
   cursor: pointer;
   &:hover {
     color: #090;

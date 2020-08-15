@@ -370,23 +370,30 @@ body {
             flex-direction: column; }
   .submit-a-quote label {
     margin-bottom: 10px; }
-  .submit-a-quote input {
+  .submit-a-quote textarea {
     margin-bottom: 20px;
     background-color: #222222;
     border: 2px solid #00cc00;
     border-radius: 2px;
     height: 30px;
-    color: white; }
+    color: white;
+    padding: 5px; }
 
 #quote-form {
-  height: 60px; }
+  height: 38px; }
 
 #submit {
+  background-color: #222222;
+  font-family: Exo;
+  border: 1px solid #00cc00;
+  border-radius: 3px;
+  font-size: 1em;
+  line-height: 1;
   color: #00cc00;
-  width: 100px;
-  margin-top: 25px;
+  width: 125px;
+  margin-top: 10px;
   height: 30px;
-  padding: 2px 5px;
+  padding: 5px 5px;
   cursor: pointer; }
   #submit:hover {
     color: #090; }
