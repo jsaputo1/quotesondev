@@ -40,7 +40,6 @@
   // Submit quote
   $('#submit').on('click', function (event) {
     event.preventDefault();
-
     const $authorToAdd = $('#author-form').val();
     const $quoteToAdd = $('#quote-form').val();
     const $sourceToAdd = $('#source-form').val();
@@ -69,7 +68,14 @@
         }
       })
       .fail(function (err) {
-        alert(err.responseJSON.message)
+        alert(err.responseJSON.message);
       });
   }); // Closing event listener (generate quote)
+
+  //Auto adjust quote textbox
+  $('#quote-form').on('input', function () {
+    this.style.height =
+      (this.scrollHeight) + 'px';
+  });
+
 })(jQuery); // Closing document ready function
