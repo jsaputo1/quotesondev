@@ -9,7 +9,6 @@ body {
   
   a {
     color: $green;
-
     text-decoration: none;
 
     &:visited {
@@ -28,15 +27,6 @@ body {
   }
   h2 {
     font-weight: 500;
-  }
-  @include desktop {
-    p {
-      display: flex;
-      align-self: flex-start;
-      justify-content: center;
-      margin: 4.5rem 175px 1.5rem;
-    }
-
   }
 }
 
