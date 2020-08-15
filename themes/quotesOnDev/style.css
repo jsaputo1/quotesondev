@@ -122,14 +122,17 @@ footer {
       footer p {
         margin-top: 0px; }
       footer span {
-        padding: 0 15px 0 10px; } }
-  footer .hidden-dash {
-    display: block; }
+        padding: 0 15px 0 10px; }
+      footer .hidden-dash {
+        display: block; } }
   @media (min-width: 1040px) {
     footer {
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; } }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 40px; }
+      footer a {
+        padding-left: 5px; } }
 
 body {
   background: #222222;
@@ -154,17 +157,6 @@ body {
     font-weight: 500; }
   body h2 {
     font-weight: 500; }
-  @media (min-width: 1040px) {
-    body p {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      margin: 4.5rem 175px 1.5rem; } }
 
 @media (min-width: 1040px) {
   .random-quote-home-page {

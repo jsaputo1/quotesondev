@@ -26,11 +26,17 @@ footer {
     span {
       padding: 0 15px 0 10px;
     }
+    .hidden-dash {
+      display: block;
+    }
   }
-  .hidden-dash {
-    display: block;
-  }
+
   @include desktop {
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 40px;
+
+    a {
+      padding-left: 5px;
+    }
   }
 }
