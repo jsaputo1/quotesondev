@@ -359,6 +359,9 @@ body {
   cursor: pointer; }
 
 .submit-a-quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 16px; }
   .submit-a-quote form {
     display: -webkit-box;
@@ -378,6 +381,14 @@ body {
     height: 30px;
     color: white;
     padding: 5px; }
+    @media (min-width: 1040px) {
+      .submit-a-quote textarea {
+        width: 500px; } }
+  @media (min-width: 1040px) {
+    .submit-a-quote {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 #quote-form {
   height: 38px; }
