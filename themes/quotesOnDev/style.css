@@ -172,15 +172,22 @@ body {
             align-items: center;
     max-width: 1080px;
     margin: 0 auto; }
+    .random-quote-home-page p {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 4.5rem 175px 1.5rem; }
     .random-quote-home-page .author {
       margin-left: 300px; }
-    .random-quote-home-page .source {
-      margin-bottom: 30px; } }
-
-.random-quote-home-page q {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+    .random-quote-home-page q {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 #quote-button {
   font-family: Exo;
@@ -251,17 +258,27 @@ body {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; } }
+            justify-content: center; }
+    .home-quote p {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 4.5rem 175px 1.5rem; } }
 
 @media (min-width: 1040px) {
-  q::before {
+  .home-quote q::before {
     content: '\F10d';
     font-family: 'FontAwesome';
     font-weight: 900;
     font-size: 125px;
     color: #00cc00;
     margin-top: 100px; }
-  q::after {
+  .home-quote q::after {
     content: '\F10e';
     font-family: 'FontAwesome';
     font-weight: 900;

@@ -9,6 +9,7 @@ body {
   
   a {
     color: $green;
+
     text-decoration: none;
 
     &:visited {
@@ -28,9 +29,12 @@ body {
   h2 {
     font-weight: 500;
   }
+
 }
 
 .random-quote-home-page {
+
+
   @include desktop {
   display: flex;
   flex-direction: column;
@@ -38,18 +42,22 @@ body {
   max-width: 1080px;
   margin: 0 auto;
 
+  p {
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    margin: 4.5rem 175px 1.5rem;
+  }
   .author {
     margin-left: 300px;
   }
-  .source {
-    margin-bottom: 30px;
-  }
-
-  }
 
   q {
+    // background-color: yellowgreen;
     display: flex;
   }
+}
+
 }
 
 #quote-button {
@@ -112,7 +120,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    p {
+      display: flex;
+      align-self: flex-start;
+      justify-content: center;
+      margin: 4.5rem 175px 1.5rem;
+    }
 }
 
 @include desktop {
@@ -132,4 +145,5 @@ body {
     color: $green;
     margin-top: 100px;
   }
+}
 }
