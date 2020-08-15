@@ -5,7 +5,7 @@
         <a href="<?php echo get_home_url(); ?>/submit-a-quote">Submit a Quote</a>
         <span class="hidden-dash">|</span>
        
-       <p>Brought to you by<a href="#"> RED Academy</a></p>
+       <p>Brought to you by<a href="https://github.com/jsaputo1/quotesondev"> John Saputo</a></p>
 
 </footer>
 </body>
