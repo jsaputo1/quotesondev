@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <section class="random-quote-home-page">
+    <section class="home-container">
     <!-- Random quote loop -->
         <?php
         $args = array( 
@@ -13,7 +13,9 @@
         <div class="home-quote">
             <!-- Random quote content -->
             <q>
-                <?php the_content(); ?> 
+                <div class="quote-content">
+                    <?php the_content(); ?> 
+                </div>
             </q>
         </div>
         <div class="credentials">
