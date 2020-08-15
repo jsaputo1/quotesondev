@@ -4,6 +4,8 @@ Quotes on Dev is a multi page web app that shows random developer themed quotes,
 
 ## Final Product
 
+This is the main page, it shows a random quote from the database. Users can generate a new quote by clicking the button. 
+
 ## Technologies Used
 
 - Word Press
