@@ -85,7 +85,7 @@ require get_template_directory() . '/inc/api.php';
 
 //New Function
 function red_scripts() {
-	$script_url = get_template_directory_uri() . '/js/api.js';
+	$script_url = get_template_directory_uri() . '/build/js/api.min.js';
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'red_comments', $script_url, array( 'jquery' ), false, true );
     wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/e785bdc78c.js' );
