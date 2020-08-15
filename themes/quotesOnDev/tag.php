@@ -1,19 +1,22 @@
 <?php get_header(); ?>
 <div class="category-page"> 
     <h1 class="category-header">Tag: <?php echo single_term_title( '', false ) ;?></h1>
-    <hr class="dotted-line">
+    <hr class="single-page-dotted-line">
     <?php  
     if( have_posts() )  
     while( have_posts() ) :
     the_post();
     ?>
-    <div class="home-quote">
-        <?php the_content(); ?> 
+    <div class="category-quote-container">
+        <div class="category-quote">
+            <?php the_content(); ?> 
+        </div>
+        <div class="category-credentials">
+            <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link" target="new"> 
+            <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a></span>
+        </div>
     </div>
-    <span class="author">- <?php the_title(); ?>
-    <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link" target="new"> 
-    <?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></a></span>
-    <hr class="dotted-line">
+    <hr class="single-page-dotted-line">
     <?php endwhile;?>
 </div>
 <div class="posts-nav">
