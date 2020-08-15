@@ -8,13 +8,13 @@ This is the main page, it shows a random quote from the database. Users can gene
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/jsaputo1/quotesondev/master/themes/quotesOnDev/public/screenshots/desktop-quote.png" alt="Screenshot of main page in Destkop View">
-Desktop View
 </p>
+Desktop View
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/jsaputo1/quotesondev/master/themes/quotesOnDev/public/screenshots/mobile-quote.png" alt="Screenshot of main page in Mobile View">
-Mobile View
 </p>
+Mobile View
 
 This is the Submit a Quote page in mobile view. Registered users are able to add quotes to the database. 
 
@@ -26,8 +26,8 @@ Clicking the Archives link will bring users to a page which lists all of the aut
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/jsaputo1/quotesondev/master/themes/quotesOnDev/public/screenshots/archives-tablet.png" alt="Screenshot of quote submission page in mobile view">
-Tablet View
 </p>
+Tablet View
 
 ## Technologies Used
 
