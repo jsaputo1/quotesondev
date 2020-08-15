@@ -1,11 +1,38 @@
 .category-page {
   h1 {
     font-size: 1.5em;
+  }
+  @include desktop {
     padding-top: 25px;
+    width: 1080px;
+    margin: 0 auto;
   }
 }
 .posts-nav {
   margin: 25px 0px;
   letter-spacing: 2px;
   font-size: 16px;
+}
+
+.category-quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  @include desktop {
+    flex-wrap: wrap;
+
+
+
+
+  }
+}
+
+.category-quote {
+  margin: 10px 0px;
+}
+
+.single-page-dotted-line {
+  border-top: 1px dotted #fff;
+  margin-top: 10px;
 }

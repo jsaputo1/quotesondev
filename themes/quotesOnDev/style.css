@@ -292,13 +292,44 @@ body {
   font-weight: 300; }
 
 .category-page h1 {
-  font-size: 1.5em;
-  padding-top: 25px; }
+  font-size: 1.5em; }
+
+@media (min-width: 1040px) {
+  .category-page {
+    padding-top: 25px;
+    width: 1080px;
+    margin: 0 auto; } }
 
 .posts-nav {
   margin: 25px 0px;
   letter-spacing: 2px;
   font-size: 16px; }
+
+.category-quote-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 1040px) {
+    .category-quote-container {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+
+.category-quote {
+  margin: 10px 0px; }
+
+.single-page-dotted-line {
+  border-top: 1px dotted #fff;
+  margin-top: 10px; }
 
 .archive-page {
   padding-bottom: 75px; }
