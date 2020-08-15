@@ -6,9 +6,9 @@ Quotes on Dev is a multi page web app that shows random developer themed quotes,
 
 ## Technologies Used
 
--Word Press
--PHP
--SASS/CSS
--HTML
--Gulp
--jQuery
+- Word Press
+- PHP
+- SASS/CSS
+- HTML
+- Gulp
+- jQuery
