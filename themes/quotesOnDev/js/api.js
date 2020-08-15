@@ -65,12 +65,7 @@
             'Please check if the name of the author and the quote were filled correctly'
           );
         } else {
-        alert('Success! Your quote has been submitted.');
-        $('#author-form').val('');
-        $('#quote-form').val('');
-        $('#source-form').val('');
-        $('#url-form').val('');
-
+          window.location.href = response.link;
         }
       })
       .fail(function (err) {
