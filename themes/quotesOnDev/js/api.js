@@ -65,17 +65,16 @@
             'Please check if the name of the author and the quote were filled correctly'
           );
         } else {
-          alert('Success! Your quote has been submitted.');
-          $('#author-form').val('');
-          $('#quote-form').val('');
-          $('#source-form').val('');
-          $('#url-form').val('');
+        alert('Success! Your quote has been submitted.');
+        $('#author-form').val('');
+        $('#quote-form').val('');
+        $('#source-form').val('');
+        $('#url-form').val('');
+
         }
       })
       .fail(function (err) {
-        alert(
-          'Please check if the name of the author and the quote were filled correctly'
-        );
+        alert(err.responseJSON.message)
       });
   }); // Closing event listener (generate quote)
 })(jQuery); // Closing document ready function
