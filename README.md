@@ -16,6 +16,7 @@ Desktop View
 </p>
 Mobile View
 
+
 This is the Submit a Quote page in mobile view. Registered users are able to add quotes to the database. 
 
 <p align="center">
