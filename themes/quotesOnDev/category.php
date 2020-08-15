@@ -17,11 +17,11 @@
     <?php endwhile;?>
 </div>
 <div class="posts-nav">
-<?php the_posts_pagination(array (
-'prev_text' => __( 'Prev' ),
-'next_text' => __( 'Next' ),  
-'screen_reader_text' => __('  ')
-));?>
+    <?php the_posts_pagination(array (
+    'prev_text' => __( 'Prev' ),
+    'next_text' => __( 'Next' ),  
+    'screen_reader_text' => __('  ')
+    ));?>
 </div>
 <!-- Footer -->
 <?php get_footer();?>
