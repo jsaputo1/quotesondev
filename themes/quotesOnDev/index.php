@@ -12,11 +12,11 @@
         <?php foreach ( $quotes as $post ) : setup_postdata( $post ); ?>
         <div class="home-quote">
             <!-- Random quote content -->
-            <q class = 'quote-content'>
+            <q>
                 <?php the_content(); ?> 
             </q>
         </div>
-        <div class="quote-section">
+        <div class="credentials">
             <span class="author">— <?php the_title(); ?></span>
             <div class="source">
             <a href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>" class="source-link" target="new"> 
