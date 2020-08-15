@@ -1,7 +1,6 @@
 .archive-page {
   h1 {
     font-size: 1.6em;
-
     padding: 25px 0;
   }
 
@@ -13,12 +12,11 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     line-height: 2;
   }
 
   li {
-    padding: 0 2px;
+    padding: 0 20px;
   }
 
   a {
