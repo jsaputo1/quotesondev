@@ -4,7 +4,7 @@ Quotes on Dev is a multi page web app that shows random developer themed quotes,
 
 ## Final Product
 
-Live Demo - https://www.johnsaputo.net/qod/
+Live Demo - https://qod.johnsaputo.net/
 
 This is the main page, it shows a random quote from the database. Users can generate a new quote by clicking the button. 
 
